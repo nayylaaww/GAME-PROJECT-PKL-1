@@ -1,0 +1,49 @@
+.navbar {
+  background-color: black;
+  padding: 1px ;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: chewy;
+}
+
+.nav-links a:hover {
+  color: #bbc296;
+}
+
+/* misal di LandingPage.css */
+.konten-utama {
+  padding-top: 80px;
+}
+
+.custom-text {
+  letter-spacing: normal;
+  word-spacing: 50px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+
+.vre {
+  height: 65px; /* atur sesuai ukuran logo kamu */
+  width: 75px;
+  margin-top: 8px;
+}
