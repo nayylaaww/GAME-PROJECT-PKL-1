@@ -1,11 +1,10 @@
 .navbar {
   background-color: black;
-  padding: 1px ;
+  padding: 10px 20px ;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
-
 }
 
 .nav-links {
@@ -44,6 +43,12 @@
 
 .vre {
   height: 65px; /* atur sesuai ukuran logo kamu */
-  width: 75px;
+  width: auto;
   margin-top: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
