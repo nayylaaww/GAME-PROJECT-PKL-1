@@ -1,0 +1,40 @@
+.bg-gameinfo {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* fullscreen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #000; /* fallback kalau gambar nggak load */
+  }
+  
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.4; /* biar konten utama tetap kelihatan */
+  }
+  
+
+  
+  .logo-gameinfo {
+    width: 100%;
+    height: auto;
+    top: 50%;
+    margin-bottom: 20px;
+  }
+  
+  /* Optional styling untuk H1 dari elemen luar */
+  h1 {
+    text-align: center;
+    margin-top: 40px;
+    font-family: 'Chewy', cursive;
+    font-size: 40px;
+    color: #3c6937;
+  }
+  

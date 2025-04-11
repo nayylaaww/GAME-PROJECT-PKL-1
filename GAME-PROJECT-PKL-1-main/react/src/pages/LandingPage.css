@@ -1,0 +1,45 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.background {
+  background-image: url('../assets/background.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Judul/logo di tengah */
+.konten-utama {
+  z-index: 1;
+}
+
+.logo-judul {
+  width: 700px;
+  max-width: 300%;
+  height: auto;
+  margin-bottom: 450px;
+}
+
+/* Gambar gunung yang nempel bawah */
+.gambar-gunung {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 0;
+}
