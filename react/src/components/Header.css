@@ -1,33 +1,53 @@
 .navbar {
   background-color: black;
-  padding: 10px 20px ;
+  padding: 10px 20px;
   position: fixed;
   top: 0;
   width: 100%;
+  height: 8%;
   z-index: 1000;
+  display: flex; /* 👈 ini bikin isinya horizontal */
+  align-items: center; /* 👈 tengahkan secara vertikal */
+  justify-content: space-between; /* 👈 jarak antara logo & nav */
+}
+
+.nav-links::before {
+  content: '';
+  position: absolute;
+  width: 1000%;
+  height: 30px;
+  background-color: #2f4735;
+  top: 50%; /* posisi vertikal: tengah */
+  transform: translateY(-50%);
+  z-index: -1; /* biar di belakang teks */
 }
 
 .nav-links {
   display: flex;
+  position: relative;
   justify-content: center;
-  gap: 30px;
+  gap: 40px;
+  top: 1%;
+  right: 39%;
+ 
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
   font-family: chewy;
+  
 }
 
 .nav-links a:hover {
-  color: #bbc296;
+  color: #000000;
 }
 
 /* misal di LandingPage.css */
 .konten-utama {
-  padding-top: 80px;
+  padding-top: 10%;
 }
 
 .custom-text {
@@ -42,9 +62,9 @@
 
 
 .vre {
-  height: 65px; /* atur sesuai ukuran logo kamu */
-  width: auto;
-  margin-top: 8px;
+  height: 10%; /* atur sesuai ukuran logo kamu */
+  width: 16%;
+  margin-top: 3%;
 }
 
 * {

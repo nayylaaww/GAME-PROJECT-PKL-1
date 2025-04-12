@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+
 html, body {
   height: 100%;
   overflow: hidden;
@@ -28,10 +29,12 @@ html, body {
 }
 
 .logo-judul {
-  width: 700px;
+  position: absolute;
+  width: 32%;
   max-width: 300%;
   height: auto;
-  margin-bottom: 450px;
+  bottom:53%;
+  left: 33%;
 }
 
 /* Gambar gunung yang nempel bawah */

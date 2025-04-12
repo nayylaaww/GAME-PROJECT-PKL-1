@@ -1,11 +1,18 @@
-import React from 'react';
+import 'react';
+import "./Gameinfo.css";
+// import bg from "../assets/bg-gameinfo.png";
+// import logo from "../assets/logo-gi.png";
 
-function GameInfo() {
-  return (
-    <div>
-      <h1>Halaman Game Info</h1>
-    </div>
-  );
-}
+// function GameInfo() {
+//   return (
 
-export default GameInfo;
+//     <div className="page-gameinfo">
+//       <div className="konten-utama">
+//         <img src={logo} alt="Logo" className="logo-gameinfo" />
+//       </div>
+//       <img src={bg} alt="bg" className="background" />
+//     </div>
+//   )
+// }
+
+// export default GameInfo;

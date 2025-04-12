@@ -1,4 +1,4 @@
-import React from 'react';
+import 'react';
 import './LandingPage.css'; 
 import gunung from "../assets/gunung.png";
 import logo from "../assets/logo.png";
@@ -14,6 +14,7 @@ function LandingPage() {
 
       <img src={gunung} alt="Gunung" className="gambar-gunung" />
     </div>
+
 
   );
 }
