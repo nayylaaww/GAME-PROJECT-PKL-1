@@ -14,7 +14,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/gameinfo" element={<GameInfo />} />
-        <Route path="/karakter" element={<Karakter />} />
+        <Route path="/karakter" element={<Karakter/>} />
       </Routes>
     </>
   );

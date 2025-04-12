@@ -1,10 +1,8 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 
 html, body {
   height: 100%;
@@ -23,21 +21,25 @@ html, body {
   align-items: center;
 }
 
-/* Judul/logo di tengah */
 .konten-utama {
+  position: relative;
   z-index: 1;
+  text-align: center;
+  height: 100%;
 }
 
 .logo-judul {
-  position: absolute;
-  width: 32%;
-  max-width: 300%;
+  width: 30%; /* Bisa coba 45% jika kurang besar */
+  max-width: 100%;
   height: auto;
-  bottom:53%;
-  left: 33%;
+  position: relative;
+  margin-bottom: 20px;
+  bottom: 15%;
+  left: -1%;
 }
 
-/* Gambar gunung yang nempel bawah */
+
+
 .gambar-gunung {
   position: fixed;
   bottom: 0;
@@ -45,4 +47,51 @@ html, body {
   width: 100%;
   height: auto;
   z-index: 0;
+}
+
+/* Tombol Container */
+.tombol-wrapper {
+  margin-bottom: 13%;
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.tombol-custom {
+  display: inline-block;
+  padding: 14px 40px;
+  font-size: 18px;
+  background-color: #5a8565;
+  color: white;
+  font-family: 'Freckle Face', cursive;
+  text-decoration: none;
+  border: 3px solid black;
+  border-radius: 50px; /* kanan kiri bulat */
+  transition: all 0.3s ease;
+  text-align: center;
+  min-width: 220px;
+}
+
+.tombol-custom:hover {
+  background-color: #2c4e2b;
+  transform: scale(1.05);
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .tombol-custom {
+    padding: 12px 30px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tombol-custom {
+    padding: 10px 25px;
+    font-size: 14px;
+    width: 80%;
+  }
 }
