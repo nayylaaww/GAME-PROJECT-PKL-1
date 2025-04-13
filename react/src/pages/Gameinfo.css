@@ -1,40 +1,99 @@
-.bg-gameinfo {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* fullscreen */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background-color: #000; /* fallback kalau gambar nggak load */
+/* Animasi untuk logo */
+@keyframes logo-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
   }
-  
-  .background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
-    opacity: 0.4; /* biar konten utama tetap kelihatan */
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
+}
 
-  
-  .logo-gameinfo {
-    width: 100%;
-    height: auto;
-    top: 50%;
-    margin-bottom: 20px;
+/* Animasi untuk gulungan kertas */
+@keyframes gulungan-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
   }
-  
-  /* Optional styling untuk H1 dari elemen luar */
-  h1 {
-    text-align: center;
-    margin-top: 40px;
-    font-family: 'Chewy', cursive;
-    font-size: 40px;
-    color: #3c6937;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
+}
+
+/* Animasi untuk teks gulungan */
+@keyframes gulungan-text-animation {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Aplikasikan animasi */
+.bg-gameinfo {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* fullscreen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #000; /* fallback kalau gambar nggak load */
+  z-index: 0;
+}
+
+.gameinfo-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.logo-gameinfo {
+  position: absolute;
+  width: 55%;
+  left: 22.5%;
+  height: auto;
+  top: -10%;
+  margin-bottom: 20px;
+  z-index: 10;
+  animation: logo-animation 1.5s ease-out forwards; /* Menambahkan animasi logo */
+}
+
+.gulungan-kertas {
+  position: absolute;
+  width: 80%;
+  max-width: 120%;
+  height: auto;
+  top: 18%;
+  left: 9%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  animation: gulungan-animation 1.5s ease-out forwards; /* Menambahkan animasi gulungan kertas */
+}
+
+/* Kontainer teks di atas gulungan */
+.gulungan-text {
+  position: absolute;
+  width: 100%; /* ubah dari 500px ke persentase */
+  max-width: 700px;
+  top: 48%;
+  left: 31.5%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  color: #ffffff;
+  font-family: 'Freckle Face'; /* ganti nanti kalau mau font lain */
+  font-size: 22px;
+  text-align: center; /* biar teks melebar rata kiri-kanan */
+  line-height: 1.8;
+  padding: 20px;
+  animation: gulungan-text-animation 2s ease-out forwards; /* Menambahkan animasi teks gulungan */
+}
