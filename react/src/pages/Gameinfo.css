@@ -74,7 +74,7 @@
   max-width: 120%;
   height: auto;
   top: 18%;
-  left: 9%;
+  left: 10%;
   transform: translate(-50%, -50%);
   z-index: 3;
   animation: gulungan-animation 1.5s ease-out forwards; /* Menambahkan animasi gulungan kertas */

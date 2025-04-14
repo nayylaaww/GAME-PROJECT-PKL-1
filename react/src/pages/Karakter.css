@@ -6,6 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start; /* Menjaga agar konten diatur dari atas */
+    z-index: 1;
   }
   
   .karakter-bg {
@@ -20,17 +21,284 @@
   
   .karakter-content {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     text-align: center;
   }
   
   .logo-karakter {
     position: relative;
-    top: 10%;
-    left: 50%;
+    bottom: 100px; /* Atur posisi logo sesuai kebutuhan */
+    left: 23%;
     transform: translateX(-50%);
-    width: 20%;
+    width: 50%;
     height: auto;
     z-index: 999; /* Pastikan logo berada di atas konten lain */
   }
   
+  .papan-karakter1 {
+    position: absolute;
+    top:  38%;
+    left: 10%;
+    transform: translateX(-50%);
+    width: 21%;
+    height: auto;
+    z-index: 999; /* Pastikan papan karakter berada di atas konten lain */
+  }
+  .papan-karakter2 {
+    position: absolute;
+    top:  38%;
+    left: 35%;
+    transform: translateX(-50%);
+    width: 21%;
+    height: auto;
+    z-index: 999; /* Pastikan papan karakter berada di atas konten lain */
+  }
+  .papan-karakter3 {
+    position: absolute;
+    top:  38%;
+    left: 64%;
+    transform: translateX(-50%);
+    width: 21%;
+    height: auto;
+    z-index: 999; /* Pastikan papan karakter berada di atas konten lain */
+  }
+  .papan-karakter4 {
+    position: absolute;
+    top:  38%;
+    left: 90%;
+    transform: translateX(-50%);
+    width: 21%;
+    height: auto;
+    z-index: 999; /* Pastikan papan karakter berada di atas konten lain */
+  }
+
+  .papan-nama1 {
+    position: absolute;
+    top: 80%;
+    left: 9.8%;
+    transform: translateX(-50%);
+    width: 18%;
+    height: auto;
+    z-index: 999; /* Pastikan papan nama berada di atas konten lain */
+  }
+  .papan-nama2 {
+    position: absolute;
+    top: 80%;
+    left: 35%;
+    transform: translateX(-50%);
+    width: 18%;
+    height: auto;
+    z-index: 999; /* Pastikan papan nama berada di atas konten lain */
+  }
+  .papan-nama3 {
+    position: absolute;
+    top: 80%;
+    left: 64%;
+    transform: translateX(-50%);
+    width: 18%;
+    height: auto;
+    z-index: 999; /* Pastikan papan nama berada di atas konten lain */
+  }
+  .papan-nama4 {
+    position: absolute;
+    top: 80%;
+    left: 90%;
+    transform: translateX(-50%);
+    width: 18%;
+    height: auto;
+    z-index: 999; /* Pastikan papan nama berada di atas konten lain */
+  }
+
+  .karakter-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup-box {
+    display: flex;
+    flex-direction: row;
+    background: none;
+    width: 80%;
+    max-width: 900px;
+    position: relative;
+    gap: 20px;
+  }
+  
+  .popup-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .frame-border {
+    background-image: url('../assets/karakter/frame.png'); /* ganti ini sesuai bingkai kamu */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup-char-img {
+    max-height: 80%;
+    max-width: 80%;
+  }
+  
+  .popup-right {
+    flex: 1.5;
+    position: relative;
+  }
+  
+  .parchment {
+    background-image: url('../assets/karakter/kertas.png'); /* background seperti kertas */
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 40px;
+    font-family: 'Papyrus', fantasy;
+    color: #000;
+    border-radius: 10px;
+    height: 100%;
+  }
+  
+
+  
+  .char-desc {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  .char-footer {
+    margin-top: 20px;
+    font-style: italic;
+    color: #333;
+  }
+  
+  .popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  
+  .popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  
+  .papan-karakter1,
+.papan-karakter2,
+.papan-karakter3,
+.papan-karakter4 {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.grimleaf {
+  position: absolute;
+  top: 39%;
+  left: 2%;
+  width: 17%;
+  height: auto;
+  z-index: 999; /* Pastikan gambar berada di belakang konten lain */
+}
+
+.stonzel {
+  position: absolute;
+  top: 36%;
+  left: 26.2%;
+  width: 18%;
+  height: auto;
+  z-index: 999; /* Pastikan gambar berada di belakang konten lain */
+}
+
+.sylphern {
+  position: absolute;
+  top: 35%;
+  left: 54.5%;
+  width: 19%;
+  height: auto;
+  z-index: 999; /* Pastikan gambar berada di belakang konten lain */
+}
+
+.mosslyn {
+  position: absolute;
+  top: 35%;
+  left: 80.5%;
+  width: 19%;
+  height: auto;
+  z-index: 999; /* Pastikan gambar berada di belakang konten lain */
+}
+
+.nama1 {
+  position: absolute;
+  top: 84%;
+  left: 9.8%;
+  transform: translateX(-50%);
+  width: 12%;
+  height: auto;
+  z-index: 999; /* Pastikan nama berada di atas konten lain */
+}
+.nama2 {
+  position: absolute;
+  top: 84%;
+  left: 35%;
+  transform: translateX(-50%);
+  width: 12%;
+  height: auto;
+  z-index: 999; /* Pastikan nama berada di atas konten lain */
+}
+.nama3 {
+  position: absolute;
+  top: 84%;
+  left: 64%;
+  transform: translateX(-50%);
+  width: 12%;
+  height: auto;
+  z-index: 999; /* Pastikan nama berada di atas konten lain */
+}
+.nama4 {
+  position: absolute;
+  top: 84%;
+  left: 90%;
+  transform: translateX(-50%);
+  width: 12%;
+  height: auto;
+  z-index: 999; /* Pastikan nama berada di atas konten lain */
+}
+
+.popup-img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 12px;
+}
